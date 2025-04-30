@@ -1,6 +1,7 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Stella's Third Blog Post
-author: Astro Learner
+author: Stiggy Stella
 description: "I had some challenges, but asking in the community really helped!"
 image:
     url: "https://docs.astro.build/assets/rays.webp"

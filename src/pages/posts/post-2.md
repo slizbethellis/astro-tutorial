@@ -1,6 +1,7 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Stella's Second Blog Post
-author: Astro Learner
+author: Stiggy Stella
 description: "After learning some Astro, I couldn't stop!"
 image:
     url: "https://docs.astro.build/assets/arc.webp"
