@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Stella's Third Blog Post
 author: Stiggy Stella
 description: "I had some challenges, but asking in the community really helped!"

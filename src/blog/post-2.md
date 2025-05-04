@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Stella's Second Blog Post
 author: Stiggy Stella
 description: "After learning some Astro, I couldn't stop!"

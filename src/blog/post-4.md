@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Stella's Fourth Blog Post
 author: Stiggy Stella
 description: "This post will show up on its own!"

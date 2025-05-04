@@ -12,7 +12,7 @@ const identity = {
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs", "Chomping", "Jumping"];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 
 const skillColor = "navy";
@@ -25,10 +25,16 @@ const textCase = "uppercase";
     color: purple;
     font-size: 4rem;
   }
+  .dark h1 {
+    color: #ffbe98;
+  }
   .skill {
     color: var(--skillColor);
     font-weight: var(--fontWeight);
     text-transform: var(--textCase);
+  }
+  .dark .skill {
+    color: #f4caff;
   }
 </style>
 
