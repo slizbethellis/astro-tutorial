@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import stellaCat from '../assets/stellacat.jpg';
 import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "About Me, Stella the Magnificent";
 
@@ -36,10 +38,32 @@ const textCase = "uppercase";
   .dark .skill {
     color: #f4caff;
   }
+  .stella-box {
+    width: 288px;
+    height: 288px;
+    margin: 0 auto;
+    border-radius: calc(infinity * 1px);
+    overflow: hidden;
+    @media (width >= 48rem /* 768px */) {
+      width: 384px;
+      height: 384px;
+    };
+  }
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
   <h2>... and my new Astro site!</h2>
+  <div class="stella-box">
+    <Image
+      src={stellaCat}
+      alt="closeup of gorgeous Russian Blue cat with crinkled ear"
+      width="384"
+      height="384"
+      loading="eager"
+      fit="cover"
+      layout="constrained"
+    />
+  </div>
 
   <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself! (Don't ask how a cat can type.)</p>
 
