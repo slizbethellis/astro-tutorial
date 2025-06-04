@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import netlify from '@astrojs/netlify';
 
 import preact from "@astrojs/preact";
 
@@ -10,4 +11,7 @@ export default defineConfig({
   experimental: {
     responsiveImages: true,
   },
+  adapter: netlify({
+    imageCDN: true,
+  }),
 });
