@@ -1,0 +1,63 @@
+---
+import { Picture, getImage } from "astro:assets";
+import { getCollection } from 'astro:content';
+import pswpModule from 'photoswipe';
+
+const images = await getCollection("images");
+const pictures = images[0].data.pictures;
+---
+
+<div
+	id="gallery"
+	class="gallery-container"
+>
+	{pictures.map(async (image: any) => {
+		let optimizedImage = await getImage({ src: image.img, inferSize: true, fit: "cover", layout: "constrained" });
+		return (
+			<a
+				class="photo-button"
+				href={optimizedImage.src}
+				data-pswp-src={optimizedImage.src}
+				data-pswp-srcset={optimizedImage.srcSet.attribute}
+				data-pswp-width={image.img.width}
+				data-pswp-height={image.img.height}
+				target="_blank"
+			>
+				<Picture
+					src={image.img}
+					alt={image.alt}
+					height={150}
+					inferSize={true}
+					fit="cover"
+					layout="constrained"
+				/>
+			</a>
+		)
+	} 
+	)}
+</div>
+
+<style>
+	.photo-button:not(:last-child) {
+		margin-right: 1rem;
+	}
+	.photo-button {
+		display: inline-block;
+	}
+</style>
+
+<script>
+	import "photoswipe/style.css";
+	import pswpModule from 'photoswipe'
+  import PhotoSwipeLightbox from 'photoswipe/lightbox'
+  let lightbox: PhotoSwipeLightbox;
+
+	lightbox = new PhotoSwipeLightbox({
+		gallery: "#gallery",
+		children: "a",
+		showHideAnimationType: 'fade',
+		pswpModule,
+	});
+
+	lightbox.init();
+</script>

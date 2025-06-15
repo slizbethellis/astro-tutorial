@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import stellaCat from '../assets/stellacat.jpg';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PhotoSwipe from '../components/PhotoSwipe.astro'
 const pageTitle = "About Me, Stella the Magnificent";
 
 const identity = {
@@ -86,4 +87,5 @@ const textCase = "uppercase";
   {finished && <p>I finished this tutorial!</p>}
 
   {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+  <PhotoSwipe />
 </BaseLayout>
